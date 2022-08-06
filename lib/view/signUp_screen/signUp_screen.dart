@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/view/country_selection_screen.dart/country_selection_screen.dart';
+import 'package:news_app/view/widgets/button.dart';
 import 'package:sizer/sizer.dart';
+
+import '../choise_screen/choose_topic_screen/choose_topic_screen.dart';
+import '../widgets/input_tile.dart';
+
 
 class SignUpScreen extends StatelessWidget {
   SignUpScreen({Key? key}) : super(key: key);
@@ -44,27 +48,12 @@ class SignUpScreen extends StatelessWidget {
                       Text('Remember me'),
                     ],
                   ),
-                  SizedBox(
-                    width: double.infinity,
-                    height: 50,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushAndRemoveUntil(
-                            context,
-                            MaterialPageRoute(builder: (ctx) => CountrySelectionScreen()),
-                            (route) => false);
-                      },
-                      child: Text("Continue"),
-                      style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStateProperty.all(Colors.orange),
-                          shape:
-                              MaterialStateProperty.all<RoundedRectangleBorder>(
-                                  RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(25),
-                          ))),
-                    ),
-                  ),
+                  CustomButton(title: "Continue",onTap: () {
+                    Navigator.pushAndRemoveUntil(
+              context,
+              MaterialPageRoute(builder: (ctx) => ChooseTopicScreen()),
+              (route) => false);
+                  },),
                   SizedBox(
                     height: 3.h,
                   ),
@@ -126,28 +115,7 @@ class SignUpScreen extends StatelessWidget {
     );
   }
 
-  Column signUp_widget(String title, TextEditingController controller) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(title),
-        SizedBox(
-          height: 15,
-        ),
-        Container(
-          width: double.infinity,
-          height: 50,
-          decoration: BoxDecoration(
-              border: Border.all(color: Colors.grey.shade400),
-              borderRadius: BorderRadius.circular(10)),
-          child: TextFormField(
-            controller: controller,
-            decoration: InputDecoration(
-              border: InputBorder.none,
-            ),
-          ),
-        )
-      ],
-    );
-  }
+  
 }
+
+
