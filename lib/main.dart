@@ -3,7 +3,7 @@ import 'package:news_app/view/onboarding_screen/onboarding_screen.dart';
 import 'package:sizer/sizer.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {

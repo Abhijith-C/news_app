@@ -103,7 +103,7 @@ class SignUpScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           icon,
-          SizedBox(
+         const SizedBox(
             width: 10,
           ),
           Text(

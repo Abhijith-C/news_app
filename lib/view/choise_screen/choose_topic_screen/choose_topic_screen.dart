@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/view/choise_screen/choose_news_source_screen/choose_news_source_screen.dart';
 import 'package:news_app/view/profile_screen/profile_screen.dart';
 import 'package:news_app/view/widgets/button.dart';
 import 'package:news_app/view/widgets/custom_textField.dart';
@@ -26,7 +25,7 @@ class ChooseTopicScreen extends StatelessWidget {
           children: [
             CustomTextField(hintText: 'Search', icon: Icons.search),
             SizedBox(
-              height: 3.h,
+              height: 10,
             ),
             Expanded(
               child: GridView.builder(
@@ -43,7 +42,7 @@ class ChooseTopicScreen extends StatelessWidget {
                         height: double.infinity,
                         width: double.infinity,
                         decoration: BoxDecoration(
-                          border: Border.all(color: Colors.orange),
+                            border: Border.all(color: Colors.orange),
                             image: DecorationImage(
                                 image: AssetImage('assets/images/animal.jpg'),
                                 fit: BoxFit.cover),
@@ -87,8 +86,8 @@ class ChooseTopicScreen extends StatelessWidget {
               },
             ),
             SizedBox(
-              height: 6,
-            )
+              height: 10,
+            ),
           ],
         ),
       ),
